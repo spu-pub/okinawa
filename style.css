@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1c1c1c;
+    --secondary-color: #d9d0c2;
+    --accent-color: #0f0f0f;
+    --text-dark: #1e1e1e;
+    --text-light: #5b5b5b;
+    --sand: #e8e3d9; 
+}
+
+body {
+    color: var(--text-dark);
+    background: var(--sand);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
