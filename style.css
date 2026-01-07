@@ -56,3 +56,68 @@ body {
     gap: 12px;
 }
 
+.nav-cta {
+    text-decoration: none;
+    background: #0f0f0f;
+    color: #f6f6f6;
+    padding: 15px 26px;
+    letter-spacing: 0.14rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 0.2s ease, 
+    box-shadow 0.2s ease;
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+.menu-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--text-dark);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.menu-btn span {
+    width: 22px;
+    height: 2px;
+    background: var(--text-dark);
+    display: block;
+    margin-top: 7px;
+}
+
+.menu-btn span + span {
+    margin-top: -15px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    margin-top: 0;
+    background: var(--sand);
+    padding: 160px 56px 90px;
+    position: relative;
+}
+
+.hero-frame {
+    position: relative;
+    width: 100%;
+    min-height: 82vh;
+}
+
+.hero-visual .hero-image-layer {
+    position: absolute;
+    background-image: var(--hero-image, url('https://www.ana.co.jp/japan-travel-planner/okinawa/img/hero.jpg'));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
