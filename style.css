@@ -121,3 +121,67 @@ body {
     width: 100%;
     height: 100%;
 }
+
+.hero-frame::after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(120deg, rgba(0,0,0,0.32), rgba(0,0,0,0.1));
+    inset: 0;
+}
+
+.hero-content {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    max-width: 520px;
+}
+
+.hero-kicker {
+    font-size: clamp(3rem, 7vw, 5.8rem);
+    letter-spacing: 0.08em;
+    line-height: 0.95;
+}
+
+.hero-title {
+    font-size: clamp(4rem, 12vw, 8rem);
+    letter-spacing: 0.05em;
+    line-height: 0.9;
+}
+
+.hero-sub {
+    margin-top: 6px;
+    font-size: clamp(1.2rem, 3vw, 2.4rem);
+    text-transform: none;
+    display: inline-block;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f3f3f3;
+    font-size: 0.8rem;
+    letter-spacing: 0.18rem;
+    animation: scrollFadeUp 2.4s ease-in-out infinite;
+}
+
+@keyframes scrollFadeUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 16px);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(-50%, 6px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(-50%, -4px);
+    }
+}
