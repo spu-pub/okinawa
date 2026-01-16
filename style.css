@@ -336,12 +336,32 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .top-nav {
+        justify-content: flex-end;
+    }
+
+    .hero-content {
+        z-index: 2;
+    }
+
     .hero {
         padding: 140px 35px 70px;
     }
 
     .hero-visual .hero-visual-layer {
         inset: 0;
+    }
+
+    .spots-section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        padding: 2rem 0;
     }
 }
 
