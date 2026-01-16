@@ -97,6 +97,10 @@ body {
     margin-top: -15px;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -328,4 +332,66 @@ footer {
     color: #fff;
     text-align: center;
     padding: 3rem 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 140px 35px 70px;
+    }
+
+    .hero-visual .hero-visual-layer {
+        inset: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 18px 20px;
+        gap: 10px;
+    }
+    .nav-logo {
+        display: none;
+    }
+    .nav-cta {
+        padding: 12px 18px;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+    }
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+    .hero {
+        padding: 30px 22px 60px;
+        min-height: 90vh;
+    }
+    .hero-content {
+        margin-top: 50px;
+        margin-left: 20px;
+        padding-top: 20px;
+
+        & .hero-kicker {
+            font-size: 25px;
+            letter-spacing: 0.08em;
+        }
+
+        & .hero-title {
+            font-size: 34px;
+            letter-spacing: 0.07em;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        & .hero-sub {
+            font-size: 15px;
+        }
+    }
+    .scroll-indicator {
+        bottom: 28px;
+    }
+
+    .scroll-line {
+        height: 42px;
+    }
 }
