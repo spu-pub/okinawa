@@ -432,3 +432,27 @@ html {
         transform: translateY(0);
     }
 }
+
+/* Spots Modal */
+.spot-info-templates {
+    display: block;
+}
+
+.spot-info-template {
+    display: block;
+
+    & .spot-info-lead {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    & .spot-info-list {
+        margin-bottom: 1.5rem;
+
+        & li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+    }
+}
