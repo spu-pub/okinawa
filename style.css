@@ -435,7 +435,7 @@ html {
 
 /* Spots Modal */
 .spot-info-templates {
-    display: block;
+    display: none;
 }
 
 .spot-info-template {
@@ -453,6 +453,42 @@ html {
             margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
+
+            &::before {
+                position: absolute;
+                content: '✓';
+                left: 0;
+                color: #000;
+                font-weight: bold;
+            }
         }
+    }
+    & .spot-info-tip, .spot-info-season {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: #f1ece3;
+        border-radius: 8px;
+    }
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    & .modal-content {
+        background: #fff;
+        margin: 5% auto;
+        width: 90%;
+        max-width: 600px;
+        height: 80vh;
+        padding: 2rem;
+        overflow-y: auto;
     }
 }

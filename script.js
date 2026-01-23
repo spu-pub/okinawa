@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnLoad();
     // Scroll FadeIn
     initScrollReveal();
+
+    initModal();
 });
 
 function animateOnLoad() {
@@ -42,3 +44,34 @@ function initScrollReveal() {
         targets.forEach((el) => el.classList.add('is-visible'));
     }
 }
+
+function openModal(content) {
+    const modal = document.getElementById('spotModal');
+    const modalBody = document.getElementById('modalBody');
+    if(modal && modalBody) {
+        modalBody.innerHTML = content;
+        modal.style.display = 'block';
+    }
+}
+
+function initModal() {
+    const modal = document.getElementById('spotModal');
+    const closeBtn = document.querySelector('.close');
+    if(closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('spotModal');
+    if(modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function showSpotInfo(spotId) {
+    const template = document.getElementById(`spot-info-${spotId}`);
+    if(template) {
+        openModal(template.innerHTML);
+    }
+} 
