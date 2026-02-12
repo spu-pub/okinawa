@@ -490,5 +490,43 @@ html {
         height: 80vh;
         padding: 2rem;
         overflow-y: auto;
+        position: relative;
     }
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #5b5b5b;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.spot-info-list {
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+    & li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '✓';
+            left: 0;
+        }
+    }
+}
+
+.spot-info-tip,
+.spot-info-season {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f1ece3;
+    border-radius: 8px;
+}
+
+.spot-info-heading {
+    margin-bottom: 1rem;
 }
