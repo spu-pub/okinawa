@@ -81,8 +81,7 @@ body {
     display: grid;
     place-items: center;
     cursor: pointer;
-    transition: background 0.2s ease,
-    transform 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .menu-btn span {
@@ -90,15 +89,73 @@ body {
     height: 2px;
     background: var(--text-dark);
     display: block;
-    margin-top: 7px;
+    transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+    position: relative;
 }
 
 .menu-btn span + span {
-    margin-top: -15px;
+    margin-top: 0px;
+}
+
+.menu-btn.is-open span:first-child {
+    transform: translateY(3px) rotate(45deg);
+}
+
+.menu-btn.is-open span:last-child {
+    transform: translateY(-3px) rotate(-45deg);
 }
 
 .mobile-menu {
-    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1500;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.mobile-menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 80px 32px 32px;
+    background: #f8f3ea;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobile-menu li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+}
+
+.mobile-menu li a:hover {
+    text-decoration: underline;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -413,6 +470,12 @@ footer {
 
     .scroll-line {
         height: 42px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
     }
 }
 
